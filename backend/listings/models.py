@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.timezone import now
+from relators.models import Relator
 
 
 class Listing(models.Model):
