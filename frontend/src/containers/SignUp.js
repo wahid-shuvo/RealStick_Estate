@@ -79,7 +79,7 @@ const SignUp = ({setAlert, signup, isAuthenticated}) => {
                     <input className={'auth__form__input'}
                            type={'password'}
                            placeholder={'Confirm Password'}
-                           name={'password'}
+                           name={'password2'}
                            value={password2}
                            onChange={e => onChange(e)}
                            minLength={'6'}
