@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {connect} from "react-redux";
-import {Link, Navigate, RedirectFunction} from "react-router-dom";
+import {Link, Navigate} from "react-router-dom";
 import {Helmet} from "react-helmet";
 import {setAlert} from "../actions/alert";
 import {signup} from "../actions/auth";
