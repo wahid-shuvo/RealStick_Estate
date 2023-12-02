@@ -1,7 +1,7 @@
 import React from "react";
 import {Link, NavLink} from "react-router-dom";
 import {connect} from "react-redux";
-import { logout } from '../actions/auth';
+import {logout} from '../actions/auth';
 import Alert from "./Alert";
 import PropTypes from "prop-types";
 
@@ -30,16 +30,16 @@ const navbar = ({auth: {isAuthenticated, loading}, logout}) => {
                 </div>
                 <div className='navbar__bottom'>
                     <li className='navbar__bottom__item'>
-                        <NavLink className='navbar__bottom__item__link' exact to='/'>Home</NavLink>
+                        <NavLink className='navbar__bottom__item__link' to='/'>Home</NavLink>
                     </li>
                     <li className='navbar__bottom__item'>
-                        <NavLink className='navbar__bottom__item__link' exact to='/listings'>Listings</NavLink>
+                        <NavLink className='navbar__bottom__item__link' to='/listings'>Listings</NavLink>
                     </li>
                     <li className='navbar__bottom__item'>
-                        <NavLink className='navbar__bottom__item__link' exact to='/about'>About</NavLink>
+                        <NavLink className='navbar__bottom__item__link' to='/about'>About</NavLink>
                     </li>
                     <li className='navbar__bottom__item'>
-                        <NavLink className='navbar__bottom__item__link' exact to='/contact'>Contact</NavLink>
+                        <NavLink className='navbar__bottom__item__link' to='/contact'>Contact</NavLink>
                     </li>
                 </div>
             </nav>
@@ -50,11 +50,11 @@ const navbar = ({auth: {isAuthenticated, loading}, logout}) => {
 
 navbar.propTypes = {
     logout: PropTypes.func.isRequired,
-    auth: PropTypes.func.isRequired
+    auth: PropTypes.object.isRequired
 
 }
 const mapStateToProps = state => ({
     auth: state.auth
 })
 
-export default connect(mapStateToProps, { logout })(navbar);
+export default connect(mapStateToProps, {logout})(navbar);
